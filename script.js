@@ -41,3 +41,24 @@ document.getElementById('quoteForm').addEventListener('submit', (e) => {
 
   window.open(`https://wa.me/525583946770?text=${message}`, '_blank', 'noopener');
 });
+
+
+// Calendario de salidas por mes
+const monthTabs = document.querySelectorAll('.month-tab');
+const monthSchedules = document.querySelectorAll('.month-schedule');
+
+monthTabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    const month = tab.dataset.month;
+    monthTabs.forEach(btn => {
+      const selected = btn === tab;
+      btn.classList.toggle('active', selected);
+      btn.setAttribute('aria-selected', selected ? 'true' : 'false');
+    });
+    monthSchedules.forEach(schedule => {
+      const active = schedule.dataset.schedule === month;
+      schedule.classList.toggle('active', active);
+      schedule.hidden = !active;
+    });
+  });
+});

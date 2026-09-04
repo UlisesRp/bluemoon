@@ -84,6 +84,36 @@ button,input,textarea,select{font:inherit}
 @media (max-width:980px){.main-nav{position:absolute;top:72px;left:20px;right:20px;background:rgba(7,25,50,.98);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:20px;flex-direction:column;align-items:stretch;display:none}.main-nav.open{display:flex}.menu-toggle{display:block}.hero{min-height:880px}.hero-content{padding-bottom:280px}.hero-card{left:20px;right:20px;bottom:45px;width:auto}.trust-grid{grid-template-columns:1fr 1fr}.destination-grid{grid-template-columns:1fr 1fr}.destination-card.large{grid-column:span 2}.services-grid{grid-template-columns:1fr 1fr}.story-grid,.quote-grid{grid-template-columns:1fr;gap:45px}.story-image img{height:520px}.story-badge{right:20px}.section-head{align-items:flex-start;flex-direction:column;gap:16px}.contact-grid{grid-template-columns:1fr}.social-row{align-items:flex-start;flex-direction:column}.footer-grid{align-items:flex-start;flex-direction:column}}
 @media (max-width:640px){:root{--container:min(100% - 28px,1180px)}.site-header{padding:9px 0}.brand-logo{width:72px;height:auto}.brand-text strong{font-size:.87rem}.hero{min-height:860px}.hero-content{padding-top:125px;padding-bottom:290px}.hero h1{font-size:3.6rem}.hero-content>p{font-size:1rem}.hero-actions .btn{width:100%}.hero-pills{display:none}.hero-card{bottom:28px;padding:22px}.trust-grid{grid-template-columns:1fr}.trust-grid>div,.trust-grid>div:first-child{border-left:none;border-right:none;border-bottom:1px solid var(--line);padding:20px 0}.section{padding:78px 0}.section-head h2,.story-copy h2,.quote-copy h2{font-size:2.65rem}.destination-grid{grid-template-columns:1fr;grid-auto-rows:260px}.destination-card.large{grid-column:span 1}.services-grid{grid-template-columns:1fr}.story-image img{height:430px}.story-badge{position:relative;right:auto;bottom:auto;margin:-50px 16px 0}.experience{min-height:520px}.experience h2{font-size:3rem}.field-row{grid-template-columns:1fr}.quote-form{padding:22px}.social-links{flex-wrap:wrap}.footer-brand{align-items:flex-start}.floating-whatsapp{width:64px;height:64px;right:16px;bottom:16px}.whatsapp-icon-wrap{width:50px;height:50px}.whatsapp-icon-wrap img{width:30px;height:30px}.orbit-one{width:400px;height:400px}.orbit-two{width:280px;height:280px}}
 
+
+/* Calendario de salidas */
+.departures-section{background:linear-gradient(180deg,#f6f9fd 0%,#fff 100%);position:relative;overflow:hidden}
+.departures-section:before{content:'';position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(215,173,74,.13),transparent 70%);right:-180px;top:80px;pointer-events:none}
+.departures-layout{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(300px,.55fr);gap:26px;align-items:start}
+.calendar-panel{background:#fff;border:1px solid var(--line);border-radius:30px;padding:22px;box-shadow:0 22px 60px rgba(7,25,50,.09)}
+.month-tabs{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;padding:7px;background:#eef3f8;border-radius:18px;margin-bottom:24px}
+.month-tab{border:0;background:transparent;color:#56667a;font-weight:800;font-size:.78rem;padding:12px 9px;border-radius:13px;cursor:pointer;transition:.22s ease;white-space:nowrap}
+.month-tab:hover{color:var(--navy);background:rgba(255,255,255,.7)}
+.month-tab.active{background:var(--navy);color:#fff;box-shadow:0 8px 20px rgba(7,25,50,.2)}
+.month-schedule{animation:calendarFade .3s ease}
+@keyframes calendarFade{from{opacity:.2;transform:translateY(6px)}to{opacity:1;transform:none}}
+.month-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:18px;padding:2px 4px 18px;border-bottom:1px solid var(--line)}
+.month-heading>div{display:flex;align-items:baseline;gap:10px}.month-heading span{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:var(--navy)}.month-heading strong{font-size:.82rem;letter-spacing:.14em;color:#a47a22}.month-heading small{color:var(--muted);font-weight:700}
+.departure-list{display:grid;gap:10px;margin-top:14px}
+.departure-item{display:grid;grid-template-columns:76px minmax(0,1fr) 38px;align-items:center;gap:16px;padding:13px;border:1px solid transparent;border-radius:19px;background:#fbfcfe;transition:.22s ease}
+.departure-item:hover{transform:translateY(-2px);background:#fff;border-color:#d5e0eb;box-shadow:0 12px 28px rgba(7,25,50,.08)}
+.date-badge{height:64px;border-radius:16px;background:linear-gradient(145deg,#0b6eb5,#083c79);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 9px 18px rgba(11,110,181,.2)}
+.date-badge strong{font-size:1.15rem;line-height:1}.date-badge span{font-size:.62rem;letter-spacing:.13em;font-weight:800;margin-top:6px;opacity:.82}
+.departure-info{min-width:0}.departure-info>span{display:block;color:#9b7627;font-weight:800;font-size:.68rem;text-transform:uppercase;letter-spacing:.12em}.departure-info h3{font-size:1rem;line-height:1.25;margin:3px 0 2px;color:#17283b}.departure-info p{font-size:.76rem;color:var(--muted);margin:0}
+.departure-arrow{width:34px;height:34px;border-radius:50%;background:#edf4fa;color:var(--blue);display:grid;place-items:center;font-size:1.1rem;transition:.22s ease}.departure-item:hover .departure-arrow{background:var(--gold-2);color:#102033;transform:translateX(2px)}
+.calendar-poster-card{background:linear-gradient(150deg,#071932,#0d3d6d);color:#fff;border-radius:30px;padding:24px;box-shadow:0 22px 60px rgba(7,25,50,.2);position:sticky;top:105px}
+.calendar-poster-card h3{font-family:'Playfair Display',serif;font-size:2rem;margin:0 0 8px}.calendar-poster-card>p{color:rgba(255,255,255,.68);font-size:.9rem;margin:0 0 18px}
+.poster-link{display:block;position:relative;border-radius:20px;overflow:hidden;background:#fff;margin-bottom:18px;box-shadow:0 14px 34px rgba(0,0,0,.18)}
+.poster-link img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:top;transition:.35s ease}.poster-link:hover img{transform:scale(1.025)}
+.poster-link span{position:absolute;left:10px;right:10px;bottom:10px;padding:10px 13px;border-radius:12px;background:rgba(4,18,38,.86);backdrop-filter:blur(8px);color:#fff;font-size:.77rem;font-weight:800;text-align:center}
+.calendar-whatsapp{margin-top:4px}
+@media (max-width:980px){.departures-layout{grid-template-columns:1fr}.calendar-poster-card{position:relative;top:auto;display:grid;grid-template-columns:180px 1fr;column-gap:22px;align-items:center}.calendar-poster-card .eyebrow,.calendar-poster-card h3,.calendar-poster-card>p,.calendar-whatsapp{grid-column:2}.poster-link{grid-column:1;grid-row:1/span 5;margin:0}.poster-link img{aspect-ratio:3/4}}
+@media (max-width:640px){.calendar-panel{padding:14px;border-radius:24px}.month-tabs{display:flex;overflow-x:auto;scrollbar-width:none;padding:6px;margin:0 -2px 18px}.month-tabs::-webkit-scrollbar{display:none}.month-tab{flex:0 0 auto;padding:11px 15px}.month-heading{padding:0 4px 14px}.month-heading span{font-size:1.7rem}.month-heading small{font-size:.72rem}.departure-item{grid-template-columns:62px minmax(0,1fr) 30px;gap:11px;padding:10px}.date-badge{height:58px;border-radius:14px}.date-badge strong{font-size:1rem}.departure-info h3{font-size:.9rem}.departure-info p{display:none}.departure-arrow{width:30px;height:30px}.calendar-poster-card{display:block;padding:20px;border-radius:24px}.calendar-poster-card .eyebrow,.calendar-poster-card h3,.calendar-poster-card>p,.calendar-whatsapp,.poster-link{grid-column:auto;grid-row:auto}.poster-link{margin:16px 0}.poster-link img{aspect-ratio:4/5}}
+
 </style>
 </head>
 <body>
@@ -104,6 +134,7 @@ button,input,textarea,select{font:inherit}
       <nav class="main-nav" aria-label="Navegación principal">
         <a href="#destinos">Destinos</a>
         <a href="#servicios">Servicios</a>
+        <a href="#salidas">Salidas</a>
         <a href="#nosotros">Nosotros</a>
         <a href="#contacto">Contacto</a>
         <a class="btn btn-small btn-gold" href="#cotiza">Cotizar viaje</a>
@@ -230,13 +261,158 @@ button,input,textarea,select{font:inherit}
       </div>
     </section>
 
-    <section class="section experience">
-      <div class="experience-bg"></div>
-      <div class="container experience-content reveal">
-        <span class="eyebrow">Próximas aventuras</span>
-        <h2>Siempre hay una nueva salida por descubrir.</h2>
-        <p>Pregunta por escapadas de fin de semana, circuitos, playas, Pueblos Mágicos y salidas especiales nacionales e internacionales.</p>
-        <a href="#cotiza" class="btn btn-gold">Consultar próximas salidas</a>
+    <section class="section departures-section" id="salidas">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow dark">Calendario de salidas</span>
+            <h2>Elige tu próxima aventura.</h2>
+          </div>
+          <p>Consulta las salidas programadas de Blue Moon. Toca cualquier viaje para pedir informes directamente por WhatsApp.</p>
+        </div>
+
+        <div class="departures-layout">
+          <div class="calendar-panel reveal">
+            <div class="month-tabs" role="tablist" aria-label="Meses del calendario">
+              <button class="month-tab active" type="button" role="tab" aria-selected="true" data-month="sep">Septiembre</button>
+              <button class="month-tab" type="button" role="tab" aria-selected="false" data-month="oct">Octubre</button>
+              <button class="month-tab" type="button" role="tab" aria-selected="false" data-month="nov">Noviembre</button>
+              <button class="month-tab" type="button" role="tab" aria-selected="false" data-month="dec">Diciembre</button>
+              <button class="month-tab" type="button" role="tab" aria-selected="false" data-month="jan">Enero 2027</button>
+            </div>
+
+            <div class="month-schedule active" data-schedule="sep">
+              <div class="month-heading"><div><span>Septiembre</span><strong>2026</strong></div><small>3 salidas</small></div>
+              <div class="departure-list">
+              <a class="departure-item" href="https://wa.me/525583946770?text=Hola%20Blue%20Moon%20%F0%9F%8C%9B%2C%20quiero%20informes%20sobre%20la%20salida%3A%20Tequila%20%2B%20Cantaritos%20El%20G%C3%BCero." target="_blank" rel="noopener">
+                <div class="date-badge"><strong>15–16</strong><span>SEP</span></div>
+                <div class="departure-info"><span>Jalisco</span><h3>Tequila + Cantaritos El Güero</h3><p>Pide informes y disponibilidad</p></div>
+                <span class="departure-arrow" aria-hidden="true">→</span>
+              </a>
+              <a class="departure-item" href="https://wa.me/525583946770?text=Hola%20Blue%20Moon%20%F0%9F%8C%9B%2C%20quiero%20informes%20sobre%20la%20salida%3A%20Tour%20de%20Luchas%20por%20CDMX." target="_blank" rel="noopener">
+                <div class="date-badge"><strong>18</strong><span>SEP</span></div>
+                <div class="departure-info"><span>CDMX</span><h3>Tour de Luchas por CDMX</h3><p>Pide informes y disponibilidad</p></div>
+                <span class="departure-arrow" aria-hidden="true">→</span>
+              </a>
+              <a class="departure-item" href="https://wa.me/525583946770?text=Hola%20Blue%20Moon%20%F0%9F%8C%9B%2C%20quiero%20informes%20sobre%20la%20salida%3A%20Azufres%20%E2%80%94%20Solo%20Mujeres." target="_blank" rel="noopener">
+                <div class="date-badge"><strong>26</strong><span>SEP</span></div>
+                <div class="departure-info"><span>Michoacán</span><h3>Azufres — Solo Mujeres</h3><p>Pide informes y disponibilidad</p></div>
+                <span class="departure-arrow" aria-hidden="true">→</span>
+              </a>
+              </div>
+            </div>
+
+            <div class="month-schedule" data-schedule="oct" hidden>
+              <div class="month-heading"><div><span>Octubre</span><strong>2026</strong></div><small>4 salidas</small></div>
+              <div class="departure-list">
+              <a class="departure-item" href="https://wa.me/525583946770?text=Hola%20Blue%20Moon%20%F0%9F%8C%9B%2C%20quiero%20informes%20sobre%20la%20salida%3A%20Acapulco%20Expr%C3%A9s." target="_blank" rel="noopener">
+                <div class="date-badge"><strong>10</strong><span>OCT</span></div>
+                <div class="departure-info"><span>Guerrero</span><h3>Acapulco Exprés</h3><p>Pide informes y disponibilidad</p></div>
+                <span class="departure-arrow" aria-hidden="true">→</span>
+              </a>
+              <a class="departure-item" href="https://wa.me/525583946770?text=Hola%20Blue%20Moon%20%F0%9F%8C%9B%2C%20quiero%20informes%20sobre%20la%20salida%3A%20Festival%20Cervantino." target="_blank" rel="noopener">
+                <div class="date-badge"><strong>17–18</strong><span>OCT</span></div>
+                <div class="departure-info"><span>Guanajuato</span><h3>Festival Cervantino</h3><p>Pide informes y disponibilidad</p></div>
+                <span class="departure-arrow" aria-hidden="true">→</span>
+              </a>
+              <a class="departure-item" href="https://wa.me/525583946770?text=Hola%20Blue%20Moon%20%F0%9F%8C%9B%2C%20quiero%20informes%20sobre%20la%20salida%3A%20Salto%20en%20Paraca%C3%ADdas%20%E2%80%94%20Tequesquitengo%20y%20Playa%20Vikingos." target="_blank" rel="noopener">
+                <div class="date-badge"><strong>24</strong><span>OCT</span></div>
+                <div class="departure-info"><span>Morelos</span><h3>Salto en Paracaídas — Tequesquitengo y Playa Vikingos</h3><p>Pide informes y disponibilidad</p></div>
+                <span class="departure-arrow" aria-hidden="true">→</span>
+              </a>
+              <a class="departure-item" href="https://wa.me/525583946770?text=Hola%20Blue%20Moon%20%F0%9F%8C%9B%2C%20quiero%20informes%20sobre%20la%20salida%3A%20Catrinas%20%E2%80%94%20Cholula%20%26%20Val%E2%80%99Quirico." target="_blank" rel="noopener">
+                <div class="date-badge"><strong>31</strong><span>OCT</span></div>
+                <div class="departure-info"><span>Puebla</span><h3>Catrinas — Cholula & Val’Quirico</h3><p>Pide informes y disponibilidad</p></div>
+                <span class="departure-arrow" aria-hidden="true">→</span>
+              </a>
+              </div>
+            </div>
+
+            <div class="month-schedule" data-schedule="nov" hidden>
+              <div class="month-heading"><div><span>Noviembre</span><strong>2026</strong></div><small>6 salidas</small></div>
+              <div class="departure-list">
+              <a class="departure-item" href="https://wa.me/525583946770?text=Hola%20Blue%20Moon%20%F0%9F%8C%9B%2C%20quiero%20informes%20sobre%20la%20salida%3A%20Explorando%20el%20Norte%20de%20M%C3%A9xico." target="_blank" rel="noopener">
+                <div class="date-badge"><strong>7</strong><span>NOV</span></div>
+                <div class="departure-info"><span>Ruta nacional</span><h3>Explorando el Norte de México</h3><p>Pide informes y disponibilidad</p></div>
+                <span class="departure-arrow" aria-hidden="true">→</span>
+              </a>
+              <a class="departure-item" href="https://wa.me/525583946770?text=Hola%20Blue%20Moon%20%F0%9F%8C%9B%2C%20quiero%20informes%20sobre%20la%20salida%3A%20Pinal%20de%20Amoles." target="_blank" rel="noopener">
+                <div class="date-badge"><strong>7</strong><span>NOV</span></div>
+                <div class="departure-info"><span>Querétaro</span><h3>Pinal de Amoles</h3><p>Pide informes y disponibilidad</p></div>
+                <span class="departure-arrow" aria-hidden="true">→</span>
+              </a>
+              <a class="departure-item" href="https://wa.me/525583946770?text=Hola%20Blue%20Moon%20%F0%9F%8C%9B%2C%20quiero%20informes%20sobre%20la%20salida%3A%20Festival%20del%20Terror%20%E2%80%94%20Six%20Flags%20M%C3%A9xico." target="_blank" rel="noopener">
+                <div class="date-badge"><strong>7</strong><span>NOV</span></div>
+                <div class="departure-info"><span>CDMX</span><h3>Festival del Terror — Six Flags México</h3><p>Pide informes y disponibilidad</p></div>
+                <span class="departure-arrow" aria-hidden="true">→</span>
+              </a>
+              <a class="departure-item" href="https://wa.me/525583946770?text=Hola%20Blue%20Moon%20%F0%9F%8C%9B%2C%20quiero%20informes%20sobre%20la%20salida%3A%20Festival%20del%20Globo." target="_blank" rel="noopener">
+                <div class="date-badge"><strong>14</strong><span>NOV</span></div>
+                <div class="departure-info"><span>León, Guanajuato</span><h3>Festival del Globo</h3><p>Pide informes y disponibilidad</p></div>
+                <span class="departure-arrow" aria-hidden="true">→</span>
+              </a>
+              <a class="departure-item" href="https://wa.me/525583946770?text=Hola%20Blue%20Moon%20%F0%9F%8C%9B%2C%20quiero%20informes%20sobre%20la%20salida%3A%20Tecolutla%2C%20Casitas%20y%20El%20Taj%C3%ADn." target="_blank" rel="noopener">
+                <div class="date-badge"><strong>14–16</strong><span>NOV</span></div>
+                <div class="departure-info"><span>Veracruz</span><h3>Tecolutla, Casitas y El Tajín</h3><p>Pide informes y disponibilidad</p></div>
+                <span class="departure-arrow" aria-hidden="true">→</span>
+              </a>
+              <a class="departure-item" href="https://wa.me/525583946770?text=Hola%20Blue%20Moon%20%F0%9F%8C%9B%2C%20quiero%20informes%20sobre%20la%20salida%3A%20Huasteca%20Potosina%20Extrema." target="_blank" rel="noopener">
+                <div class="date-badge"><strong>27–29</strong><span>NOV</span></div>
+                <div class="departure-info"><span>San Luis Potosí</span><h3>Huasteca Potosina Extrema</h3><p>Pide informes y disponibilidad</p></div>
+                <span class="departure-arrow" aria-hidden="true">→</span>
+              </a>
+              </div>
+            </div>
+
+            <div class="month-schedule" data-schedule="dec" hidden>
+              <div class="month-heading"><div><span>Diciembre</span><strong>2026</strong></div><small>4 salidas</small></div>
+              <div class="departure-list">
+              <a class="departure-item" href="https://wa.me/525583946770?text=Hola%20Blue%20Moon%20%F0%9F%8C%9B%2C%20quiero%20informes%20sobre%20la%20salida%3A%20Zacatl%C3%A1n%2C%20Chignahuapan%20y%20Cascadas%20de%20Quetzalapan." target="_blank" rel="noopener">
+                <div class="date-badge"><strong>5</strong><span>DIC</span></div>
+                <div class="departure-info"><span>Puebla</span><h3>Zacatlán, Chignahuapan y Cascadas de Quetzalapan</h3><p>Pide informes y disponibilidad</p></div>
+                <span class="departure-arrow" aria-hidden="true">→</span>
+              </a>
+              <a class="departure-item" href="https://wa.me/525583946770?text=Hola%20Blue%20Moon%20%F0%9F%8C%9B%2C%20quiero%20informes%20sobre%20la%20salida%3A%20Villa%20Iluminada%20%E2%80%94%20Atlixco." target="_blank" rel="noopener">
+                <div class="date-badge"><strong>12</strong><span>DIC</span></div>
+                <div class="departure-info"><span>Puebla</span><h3>Villa Iluminada — Atlixco</h3><p>Pide informes y disponibilidad</p></div>
+                <span class="departure-arrow" aria-hidden="true">→</span>
+              </a>
+              <a class="departure-item" href="https://wa.me/525583946770?text=Hola%20Blue%20Moon%20%F0%9F%8C%9B%2C%20quiero%20informes%20sobre%20la%20salida%3A%20Villa%20Uni%C3%B3n%2C%20San%20Juan%20de%20los%20Lagos%20y%20Le%C3%B3n." target="_blank" rel="noopener">
+                <div class="date-badge"><strong>26–27</strong><span>DIC</span></div>
+                <div class="departure-info"><span>Ruta de compras</span><h3>Villa Unión, San Juan de los Lagos y León</h3><p>Pide informes y disponibilidad</p></div>
+                <span class="departure-arrow" aria-hidden="true">→</span>
+              </a>
+              <a class="departure-item" href="https://wa.me/525583946770?text=Hola%20Blue%20Moon%20%F0%9F%8C%9B%2C%20quiero%20informes%20sobre%20la%20salida%3A%20A%C3%B1o%20Nuevo%20en%20Riviera%20Maya%20y%20Canc%C3%BAn." target="_blank" rel="noopener">
+                <div class="date-badge"><strong>26–4</strong><span>DIC/ENE</span></div>
+                <div class="departure-info"><span>Caribe mexicano</span><h3>Año Nuevo en Riviera Maya y Cancún</h3><p>Del 26 de diciembre al 4 de enero</p></div>
+                <span class="departure-arrow" aria-hidden="true">→</span>
+              </a>
+              </div>
+            </div>
+
+            <div class="month-schedule" data-schedule="jan" hidden>
+              <div class="month-heading"><div><span>Enero</span><strong>2027</strong></div><small>1 salida</small></div>
+              <div class="departure-list">
+              <a class="departure-item" href="https://wa.me/525583946770?text=Hola%20Blue%20Moon%20%F0%9F%8C%9B%2C%20quiero%20informes%20sobre%20la%20salida%3A%20Barrancas%20del%20Cobre%20y%20Chepe%20Express." target="_blank" rel="noopener">
+                <div class="date-badge"><strong>20–24</strong><span>ENE</span></div>
+                <div class="departure-info"><span>Chihuahua</span><h3>Barrancas del Cobre y Chepe Express</h3><p>Pide informes y disponibilidad</p></div>
+                <span class="departure-arrow" aria-hidden="true">→</span>
+              </a>
+              </div>
+            </div>
+          </div>
+
+          <aside class="calendar-poster-card reveal delay-1">
+            <span class="eyebrow">Calendario oficial</span>
+            <h3>Salidas 2026–2027</h3>
+            <p>Guarda la imagen completa o compártela con quien se quiera sumar al viaje.</p>
+            <a class="poster-link" href="assets/calendario-salidas-2026-2027.jpeg" target="_blank" rel="noopener" aria-label="Abrir calendario completo">
+              <img src="assets/calendario-salidas-2026-2027.jpeg" alt="Calendario de salidas 2026 y enero 2027 de Blue Moon Agencia de Viajes">
+              <span>Abrir calendario completo ↗</span>
+            </a>
+            <a class="btn btn-gold btn-full calendar-whatsapp" href="https://wa.me/525583946770?text=Hola%20Blue%20Moon%20%F0%9F%8C%9B%2C%20quiero%20informes%20sobre%20la%20salida%3A%20el%20calendario%20de%20salidas%202026%E2%80%932027." target="_blank" rel="noopener">Preguntar por una salida</a>
+          </aside>
+        </div>
       </div>
     </section>
 
